@@ -1,0 +1,19 @@
+*** Reading local file: /usr/local/airflow/logs/sample1/t1/2020-09-28T00:00:00+00:00/1.log
+[2020-09-29 11:06:40,099] {{models.py:1361}} INFO - Dependencies all met for <TaskInstance: sample1.t1 2020-09-28T00:00:00+00:00 [queued]>
+[2020-09-29 11:06:40,115] {{models.py:1361}} INFO - Dependencies all met for <TaskInstance: sample1.t1 2020-09-28T00:00:00+00:00 [queued]>
+[2020-09-29 11:06:40,115] {{models.py:1573}} INFO - 
+--------------------------------------------------------------------------------
+Starting attempt 1 of 2
+--------------------------------------------------------------------------------
+
+[2020-09-29 11:06:40,139] {{models.py:1595}} INFO - Executing <Task(DumbOp): t1> on 2020-09-28T00:00:00+00:00
+[2020-09-29 11:06:40,139] {{base_task_runner.py:118}} INFO - Running: ['bash', '-c', 'airflow run sample1 t1 2020-09-28T00:00:00+00:00 --job_id 5 --raw -sd DAGS_FOLDER/sample_dag.py --cfg_path /tmp/tmpa20ummfv']
+[2020-09-29 11:06:40,628] {{base_task_runner.py:101}} INFO - Job 5: Subtask t1 [2020-09-29 11:06:40,628] {{settings.py:174}} INFO - setting.configure_orm(): Using pool settings. pool_size=5, pool_recycle=1800
+[2020-09-29 11:06:40,974] {{base_task_runner.py:101}} INFO - Job 5: Subtask t1 [2020-09-29 11:06:40,973] {{__init__.py:51}} INFO - Using executor LocalExecutor
+[2020-09-29 11:06:41,391] {{base_task_runner.py:101}} INFO - Job 5: Subtask t1 [2020-09-29 11:06:41,389] {{models.py:271}} INFO - Filling up the DagBag from /usr/local/airflow/dags/sample_dag.py
+[2020-09-29 11:06:41,402] {{base_task_runner.py:101}} INFO - Job 5: Subtask t1 [2020-09-29 11:06:41,402] {{sample_dag.py:48}} INFO - {'t1': <Task(DumbOp): t1>, 't2': <Task(DumbOp): t2>}
+[2020-09-29 11:06:41,435] {{base_task_runner.py:101}} INFO - Job 5: Subtask t1 [2020-09-29 11:06:41,435] {{cli.py:484}} INFO - Running <TaskInstance: sample1.t1 2020-09-28T00:00:00+00:00 [running]> on host 478b068c0a44
+[2020-09-29 11:06:41,460] {{logging_mixin.py:95}} INFO - [2020-09-29 11:06:41,460] {{dag.py:14}} INFO - SENDING TO METADATA API(<Task(DumbOp): t1>,),
+
+ {'context': {'dag': <DAG: sample1>, 'ds': '2020-09-28', 'next_ds': '2020-09-29', 'prev_ds': '2020-09-27', 'ds_nodash': '20200928', 'ts': '2020-09-28T00:00:00+00:00', 'ts_nodash': '20200928T000000+0000', 'yesterday_ds': '2020-09-27', 'yesterday_ds_nodash': '20200927', 'tomorrow_ds': '2020-09-29', 'tomorrow_ds_nodash': '20200929', 'END_DATE': '2020-09-28', 'end_date': '2020-09-28', 'dag_run': <DagRun sample1 @ 2020-09-28 00:00:00+00:00: scheduled__2020-09-28T00:00:00+00:00, externally triggered: False>, 'run_id': 'scheduled__2020-09-28T00:00:00+00:00', 'execution_date': <Pendulum [2020-09-28T00:00:00+00:00]>, 'prev_execution_date': <Pendulum [2020-09-27T00:00:00+00:00]>, 'next_execution_date': <Pendulum [2020-09-29T00:00:00+00:00]>, 'latest_date': '2020-09-28', 'macros': <module 'airflow.macros' from '/usr/local/lib/python3.6/site-packages/airflow/macros/__init__.py'>, 'params': {}, 'tables': None, 'task': <Task(DumbOp): t1>, 'task_instance': <TaskInstance: sample1.t1 2020-09-28T00:00:00+00:00 [running]>, 'ti': <TaskInstance: sample1.t1 2020-09-28T00:00:00+00:00 [running]>, 'task_instance_key_str': 'sample1__t1__20200928', 'conf': <module 'airflow.configuration' from '/usr/local/lib/python3.6/site-packages/airflow/configuration.py'>, 'test_mode': False, 'var': {'value': None, 'json': None}, 'inlets': [], 'outlets': []}, 'result': None}
+[2020-09-29 11:06:45,091] {{logging_mixin.py:95}} INFO - [2020-09-29 11:06:45,079] {{jobs.py:2627}} INFO - Task exited with return code 0
